@@ -1,0 +1,47 @@
+{
+  "eval_set_id": "time_agent_basic_set",
+  "name": "",
+  "description": "Basic eval for the time agent.",
+  "eval_cases": [
+    {
+      "eval_id": "time_agent_case_01",
+      "conversation": [
+        {
+          "invocation_id": "baf6c079-3e41-4f9a-bd1a-6fb5b4553cda",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What time is it in Tokyo?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The current time in Tokyo is 10:30 AM."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "get_current_time",
+                "args": {
+                  "city": "Tokyo"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_testbed",
+        "user_id": "test_user",
+        "state": {}
+      }
+    }
+  ]
+}
